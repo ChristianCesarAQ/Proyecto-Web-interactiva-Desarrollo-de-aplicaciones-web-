@@ -1,0 +1,128 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  background-color: #efeff3;
+  font-family: "sans-serif", Geneva, Verdana;
+}
+
+.navbar .navbar-brand {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.navbar .nav-item:hover {
+  background: rgb(25.5, 25.5, 25.5);
+  border-radius: 20px;
+}
+.navbar .nav-item .nav-link {
+  font-weight: 500;
+}
+.navbar .nav-item .nav-link.active {
+  font-weight: 800;
+}
+
+.card {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.2);
+}
+.card .card-img-top {
+  height: 250px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.container.my-4 .card {
+  border: none;
+}
+.container.my-4 .card .card-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #153a61;
+  box-shadow: 0 0 0 0.2rem rgba(21, 58, 97, 0.25);
+}
+
+.table th {
+  background-color: rgba(21, 58, 97, 0.2);
+}
+
+.btn-primary {
+  background: #153a61;
+  border: none;
+  transition: transform 0.2s;
+}
+.btn-primary:hover {
+  background: rgb(11.9237288136, 32.9322033898, 55.0762711864);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .card .card-img-top {
+    height: 200px;
+  }
+  .carousel-caption {
+    padding: 0.5rem;
+  }
+  .carousel-caption h5 {
+    font-size: 1rem;
+  }
+  .carousel-caption p {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .card .card-img-top {
+    height: 180px;
+  }
+  .display-4 {
+    font-size: 2rem;
+  }
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.carousel-control-prev-icon:after,
+.carousel-control-next-icon:after {
+  content: "";
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  margin: auto;
+  border: solid #efeff3;
+  border-width: 0 4px 4px 0;
+  padding: 3px;
+}
+
+.carousel-control-prev-icon:after {
+  transform: rotate(135deg);
+}
+
+.carousel-control-next-icon:after {
+  transform: rotate(-45deg);
+}/*# sourceMappingURL=styles.css.map */

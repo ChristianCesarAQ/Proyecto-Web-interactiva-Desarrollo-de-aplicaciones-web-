@@ -1,0 +1,179 @@
+// VARIABLES
+$primary: #153a61;
+$light: #efeff3;
+$dark: #000;
+
+$font-family-sans-serif: 'sans-serif', Geneva, Verdana;
+$border-radius: 20px;
+$box-shadow: 0 0 40px 0 rgba($dark, 0.2);
+$font-size-base: 1rem;
+$font-weight-base: 400;
+//
+@mixin card-hover-effect {
+    transition: all 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: $box-shadow;
+        
+    }
+}
+@mixin card-shadow-hover {
+    box-shadow: 0 2px 12px rgba($dark, 0.12);
+    @include card-hover-effect();
+}
+
+@mixin btn-custom {
+    background: $primary;
+    border: none;
+    transition: transform 0.2s;
+    &:hover {
+        background: darken($primary, 10%);
+        transform: scale(1.05);
+    }
+}
+
+@mixin img-rounded {
+    border-radius: $border-radius - 15px;
+    object-fit: cover;
+}
+
+@mixin carousel-icon {
+    background-image: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: rgb($dark, 0.3);
+    &:after {
+        content: '';
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        margin: auto;
+        border: solid $light;
+        border-width: 0 4px 4px 0;
+        padding: 3px;
+    }
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    background-color: $light;
+    font-family: $font-family-sans-serif;
+}
+
+//navbar personalizado
+.navbar {
+    .navbar-brand {
+        font-weight: $font-weight-base + 200;
+        font-size: $font-size-base*1.5;
+    }
+    .nav-item {
+        &:hover {
+            background: lighten($dark, 10%);
+            border-radius: $border-radius;
+        }
+        .nav-link {
+            font-weight: $font-weight-base + 100;
+            &.active {
+                font-weight: $font-weight-base + 400;
+            }
+        }
+    }
+}
+
+//Cards personalizad
+.card {
+    @include card-shadow-hover;
+    .card-img-top {
+        height: 250px;
+        @include img-rounded;
+    }
+}
+
+//
+.carousel-caption {
+    background: rgba($dark, 0.5);
+    border-radius: $border-radius;
+    padding: 1rem;
+}
+
+// Estadísticas
+.container.my-4 .card {
+    border: none;
+    
+    .card-title {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}
+
+// Formularios
+.form-control:focus,
+.form-select:focus {
+    border-color: $primary;
+    box-shadow: 0 0 0 0.2rem rgba($primary, 0.25);
+}
+
+//tablas
+.table th {
+    background-color: rgba($primary, 0.2);
+}
+.btn-primary {
+    @include btn-custom;
+}
+
+//rwsponsiva
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    
+    .card .card-img-top {
+        height: 200px;
+    }
+    
+    .carousel-caption {
+        padding: 0.5rem;
+        
+        h5 {
+            font-size: 1rem;
+        }
+        
+        p {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .card .card-img-top {
+        height: 180px;
+    }
+    
+    .display-4 {
+        font-size: 2rem;
+    }
+}
+
+//botones decarrusel
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    @include carousel-icon;
+}
+.carousel-control-prev-icon:after {
+    transform: rotate(135deg);
+}
+.carousel-control-next-icon:after {
+    transform: rotate(-45deg);
+}
+      
+
+
