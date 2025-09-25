@@ -289,7 +289,7 @@ miCatalogo.push({
     genero: "Acción",
     director: "Zack Snyder",
     calificacion: 4.5,
-    portada: "../img/300.jpg",
+    portada: "img/300.jpg",
     sinopsis: "El rey Leónidas de Esparta y sus 300 guerreros luchan hasta la muerte contra el masivo ejército persa de Jerjes I en la batalla de las Termópilas."
 });
 
@@ -300,7 +300,7 @@ miCatalogo.push({
     genero: "Fantasía",
     director: "David Benioff, D.B. Weiss",
     calificacion: 4.9,
-    portada: "../img/got.jpg",
+    portada: "img/got.jpg",
     sinopsis: "El Lord Ned Stark está preocupado por los perturbantes reportes de un desertor del Nights Watch; El Rey Robert y los Lannisters llegan a Winterfell; el exiliado Viserys Targaryen forja una nueva y poderosa alianza."
 });
 
@@ -311,7 +311,7 @@ miCatalogo.push({
     genero: "Acción",
     director: "Joss Whedon",
     calificacion: 4.8,
-    portada: "../img/vengadores.jpg",
+    portada: "img/vengadores.jpg",
     sinopsis: "Los superhéroes más poderosos de la Tierra se unen para salvar el mundo."
 });
 
